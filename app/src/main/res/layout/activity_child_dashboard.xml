@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ChildDashboard">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/SOSCard"
+        android:layout_width="match_parent"
+        android:layout_height="158dp"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#EC2222"
+        android:orientation="vertical"
+        android:padding="25dp"
+        app:cardCornerRadius="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="90dp"
+            android:layout_height="82dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="15dp"
+            android:src="@drawable/baseline_crisis_alert_24" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:layout_marginBottom="15dp"
+            android:text="SOS"
+            android:textAlignment="center"
+            android:textSize="30dp"
+            android:textStyle="bold" />
+
+    </androidx.cardview.widget.CardView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal"
+        android:layout_marginHorizontal="8dp"
+        android:gravity="center_horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/SOSCard"
+        tools:layout_editor_absoluteX="0dp">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/ChatCard"
+            android:layout_width="170dp"
+            android:layout_height="158dp"
+            android:layout_marginHorizontal="8dp"
+            android:backgroundTint="#22EC7D"
+            android:orientation="vertical"
+            android:padding="25dp"
+            app:cardCornerRadius="25dp"
+            tools:layout_editor_absoluteX="30dp"
+            tools:layout_editor_absoluteY="16dp">
+
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="62dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="30dp"
+                android:src="@drawable/baseline_chat_24" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="100dp"
+                android:layout_marginBottom="15dp"
+                android:text="Chat"
+                android:textAlignment="center"
+                android:textSize="22dp"
+                android:textStyle="bold"/>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/SettingsCard"
+            android:layout_width="170dp"
+            android:layout_height="158dp"
+            android:layout_marginHorizontal="8dp"
+            android:backgroundTint="#7C7C7C"
+            android:orientation="vertical"
+            android:padding="25dp"
+            app:cardCornerRadius="25dp"
+            tools:layout_editor_absoluteX="30dp"
+            tools:layout_editor_absoluteY="16dp">
+
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="72dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="25dp"
+                android:src="@drawable/nav_settings" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="100dp"
+                android:layout_marginBottom="15dp"
+                android:text="Settings"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:textSize="22dp" />
+
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

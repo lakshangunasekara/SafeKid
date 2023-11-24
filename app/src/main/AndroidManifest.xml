@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.SafeKid"
+        tools:targetApi="31">
+        <activity
+            android:name=".ChildInfo"
+            android:exported="false" />
+        <activity
+            android:name=".ChildDashboard"
+            android:exported="false" />
+
+        <activity
+            android:name=".ParentDashboard"
+            android:exported="false"
+            android:parentActivityName=".CreateFamily"
+            android:theme="@style/themeLavender" />
+        <!--
+             TODO: Before you run your application, you need a Google Maps API key.
+
+             To get one, follow the directions here:
+
+                https://developers.google.com/maps/documentation/android-sdk/get-api-key
+
+             Once you have your API key (it starts with "AIza"), define a new property in your
+             project's local.properties file (e.g. MAPS_API_KEY=Aiza...), and replace the
+             "YOUR_API_KEY" string in this file with "${MAPS_API_KEY}".
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="USE_YOUR_API_KEY" />
+
+        <activity
+            android:name=".MapsActivity"
+            android:exported="false"
+            android:label="@string/title_activity_maps" />
+        <activity
+            android:name=".JoinFamily"
+            android:exported="false"
+            android:parentActivityName=".SelectProfile" />
+        <activity
+            android:name=".CreateFamily"
+            android:exported="false"
+            android:parentActivityName=".SelectProfile" />
+        <activity
+            android:name=".ForgotPassword"
+            android:exported="false"
+            android:parentActivityName=".Login" />
+        <activity
+            android:name=".SelectProfile"
+            android:exported="false"
+            android:parentActivityName=".Login">
+
+
+        </activity>
+
+        <activity
+            android:name=".Register"
+            android:exported="false"
+            android:noHistory="true"/>
+        <activity
+            android:name=".Login"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:theme="@style/themeLavender">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
